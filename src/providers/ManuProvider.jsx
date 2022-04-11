@@ -8,7 +8,7 @@ const ManuProvider = ({ children }) => {
     const [manu, setManu] = useState({
         currentInfoComponent: 'artist',
         api: tempData,
-        currentArtist: {}
+        currentArtist: tempData.collections[0]
     })
     
     return (

@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useMemo, useContext } from 'react'
 import { ManuContext } from '../providers/ManuProvider'
-import { useWindowSize } from '../hooks/useWindowDimensions'
+import { useWindowSize } from '../hooks/useWindowSize'
+
+import About from '../components/About'
+import CurrentArtist from '../components/CurrentArtist'
+import Nav from '../components/Nav'
+import Video from '../components/Video'
+import Footer from '../components/Footer'
 
 import '../styles/main.scss'
 
