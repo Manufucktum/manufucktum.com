@@ -1,0 +1,24 @@
+.video-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: $dark;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+}
+
+iframe {
+    height: 186%;
+    left: -44%;
+    position: absolute;
+    top: -43%;
+    width: 186%;
+}
+
