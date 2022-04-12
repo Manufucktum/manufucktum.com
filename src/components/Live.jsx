@@ -7,6 +7,7 @@ import CurrentArtist from '../components/CurrentArtist'
 import Nav from '../components/Nav'
 import Video from '../components/Video'
 import Footer from '../components/Footer'
+import Interaction from '../components/Interaction'
 
 import '../styles/main.scss'
 
@@ -45,6 +46,7 @@ const Live = () => {
     return (
         <main className="main-container">
              <Nav /> 
+             <Interaction />
             <section 
                 className="main-video-container" 
                 style={{

@@ -1,0 +1,61 @@
+@import './vars.scss';
+.current-box {
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    margin: 10%;
+    // align-items: flex-start;
+    .ref {
+        margin-top: 100px;
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     justify-content: flex-end;
+        //     width: 20%;
+    }
+    h1 {
+        font-size: 72px;
+    }
+    .current {
+        padding: 10%;
+        max-width: 500px;
+        border: 6px solid $dark;
+        a {
+            color: $dark;
+            text-decoration: none;
+        }
+    }
+    .ref-link {
+        display: flex;
+        background-color: $dark;
+        color: $light;
+        text-decoration: none;
+        // display: block;
+        // width: 220px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 0 0 15px;
+        justify-content: space-between;
+        svg {
+            width: 50px;
+            margin-bottom: 10px;
+            transform: rotate(180deg);
+        }
+    }
+    // height: 100%;
+    h5 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 13px;
+    }
+    .artist-info {
+        display: block;
+        h1 {
+            color: $dark;
+            font-size: 30px;
+            line-height: 34px;
+            font-weight: 700;
+            margin: 5px;
+        }
+    }
+}

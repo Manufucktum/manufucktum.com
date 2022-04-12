@@ -3,7 +3,7 @@ import { ManuContext } from '../providers/ManuProvider'
 import { useWindowSize } from '../hooks/useWindowSize'
 
 import About from '../components/About'
-import CurrentArtist from '../components/CurrentArtist'
+import CurrentEvent from '../components/CurrentEvent'
 import Nav from '../components/Nav'
 import Video from '../components/Video'
 import Footer from '../components/Footer'
@@ -27,12 +27,11 @@ const Main = () => {
 
     return (
         <main className="main-container">
-            <section 
-                className="main-container">
-                <Nav /> 
-                <CurrentArtist />
-                <Footer />
-            </section> 
+            <Nav /> 
+            <div className="main-body">
+            <CurrentEvent />
+            </div>
+            <Footer />
         </main>
     )
 }

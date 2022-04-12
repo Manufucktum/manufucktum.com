@@ -3,7 +3,6 @@ import { useWindowSize } from "../hooks/useWindowSize"
 
 import { ManuContext } from "../providers/ManuProvider";
 import Lightbox from '../components/Lightbox'
-import Interaction from '../components/Interaction'
 
 import '../styles/current-artist.scss'
 // import { Link } from "gatsby";
@@ -37,6 +36,7 @@ const CurrentArtist = () => {
         <div className="current-artist-container">
             {Object.keys(manu.currentArtist).length !== 0 && (
                 <>
+                
                     <div className="artist-info">
                         <h1>{manu.currentArtist.artist.name}</h1>
                         {/* <h5>b. {artist.artist.birthcity}, {artist.artist.birthyear}</h5> 
@@ -46,8 +46,7 @@ const CurrentArtist = () => {
                     <p><b>Progress:</b> 3/10 </p>
                     <p><b>Size:</b> {manu.currentArtist.width}cm x {manu.currentArtist.height}cm x {manu.currentArtist.depths}cm </p>
                     <p><b>Materials:</b> {manu.currentArtist.materials}</p>
-                   
-                    <Interaction />
+                  
                    
                     <p>{manu.currentArtist.description}</p>
                     <div className="current-artist-nfts">

@@ -6,11 +6,12 @@ import React from 'react'
 import '../styles/video.scss'
 
 const Video = () => {
-    return (
+    return (      
         <div className="video-container">
                 <iframe title="videoEmbed" src="https://player.twitch.tv/?channel=streamnft&html5&parent=localhost" frameBorder="0" allowFullScreen={false} scrolling="no" height="378" width="620"></iframe>
                 {/* <ReactTwitchEmbedVideo height="1080" width="1080" layout="video" channel="brutusbrecht" /> */}
         </div>
+
     )
 }
 

@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // position: absolute;
-    // top: 450px;
     left: 0;
-
+    position: fixed;
+    z-index: 99999;
+    top: 300px;
     button {
         background-color: black;
         color: white;
@@ -19,17 +19,14 @@
         cursor: pointer;
         display: flex;
     }
-
     .timer {
         margin-left: 25px;
     }
-
     .interaction-icon {
         width: 50px;
         height: 32px;
         line-height: 50px;
         padding-top: 13px;
-
         svg {
             width: 60px;
             height: 37px;
