@@ -1,9 +1,10 @@
 @import './vars.scss';
-
 .nav-container {
     display: block;
-    position: sticky;
+    position: fixed;
+    z-index: 99999;
     top: 0!important;
+    background-color: white;
     width: 100%;
     left: 0;
     // padding: 15px;
@@ -16,20 +17,51 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 55px;
+    padding: 0;
+    margin: 0;
+    width: 50%;
     // position: absolute;
-    // justify-content: space-between;
+    justify-content: space-around;
     // align-items: flex-start;
+    list-style: none;
+    li {
+        font-weight: 200;
+        line-height: 50px;
+        font-size: 14px;
+        a {
+            text-decoration: none;
+            padding: 5px;
+            color: $dark;
+            &.active {
+                background-color: $dark;
+                color: $light;
+            }
+        }
+    }
 }
 
 .nav-logo-container {
-    height: 55px;
-    border: 2px solid $dark;
-    width: 55px;
-    // margin: 3px;
-    background-color: white;
+    height: 45px;
+    // border: 2px solid $dark;
+    width: 45px;
+    margin: 3px;
     box-sizing: border-box;
-    svg {
+    a {
+        padding: 0!important;
+    }
+    &:hover {
+        background-color: $dark;
+        border: 2px solid $light;
+        svg {
+            fill: $dark;
+        }
+        svg path {
+            stroke: $light;
+        }
+    }
+    svg path {
         width: 100%;
+        stroke: $dark;
     }
 }
 
@@ -46,8 +78,7 @@
     flex-grow: 1;
     margin: 0;
     cursor: pointer;
-
-    p {
+    li {
         font-weight: 200;
         opacity: .7;
         font-size: 14px;

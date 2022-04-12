@@ -30,7 +30,7 @@ const CurrentArtist = () => {
         }
     }, [size.width, size.height])
     let amount = 0;
- 
+    console.log(manu)
     
     return (
        
