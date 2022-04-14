@@ -29,7 +29,7 @@ const CurrentArtist = () => {
         }
     }, [size.width, size.height])
     let amount = 0;
-    console.log(manu)
+    console.log(manu);
     
     return (
        
@@ -38,17 +38,16 @@ const CurrentArtist = () => {
                 <>
                 
                     <div className="artist-info">
-                        <h1>{manu.currentArtist.artist.name}</h1>
+                        <h1>{manu.currentArtist.name}</h1>
                         {/* <h5>b. {artist.artist.birthcity}, {artist.artist.birthyear}</h5> 
                         <p>lives and works in {artist.artist.workcity}</p>*/}
                     </div>
-                    <h5>{manu.currentArtist.title}</h5>
+                    <h5>{manu.api.artist[0].title}</h5>
                     <p><b>Progress:</b> 3/10 </p>
-                    <p><b>Size:</b> {manu.currentArtist.width}cm x {manu.currentArtist.height}cm x {manu.currentArtist.depths}cm </p>
-                    <p><b>Materials:</b> {manu.currentArtist.materials}</p>
+                    <p><b>Size:</b> {manu.api.exibits[0].width}cm x {manu.api.exibits[0].height}cm x {manu.api.exibits[0].depths}cm </p>
+                    <p><b>Materials:</b> {manu.api.exibits[0].materials}</p>
                   
-                   
-                    <p>{manu.currentArtist.description}</p>
+               <p>{manu.api.exibits[0].description}</p> 
                     <div className="current-artist-nfts">
                         {/* <h3>NFTs</h3> */}
                         {/* <Lightbox width={dimensionsVideo.width} height={dimensionsVideo.width} videos={data.currentArtist.nfts}/> */}

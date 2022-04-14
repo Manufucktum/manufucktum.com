@@ -9,9 +9,14 @@ const Collections = () => {
     return (
         <main className="main-container">
 
-        <section className="about-container"> <h1>MANUFUCKTUM</h1>
+        <section className="about-container">
         <Nav/>
-            <p>{manu.api.desc}</p>
+        {Object.keys(manu.api).length !== 0 && (
+                <>
+                    <h1>{manu.api.general.title}</h1>
+                    <p>{manu.api.general.desc}</p>
+                </> 
+           )}
          </section>
 
          </main>

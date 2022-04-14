@@ -6,11 +6,17 @@ import '../styles/about.scss'
 
 const About = () => {
     const [manu]  = useContext(ManuContext)
+    console.log(manu);
     return (
         <section className="about-container"> 
-              <Nav /> 
-        <h1>MANUFUCKTUM</h1>
-            <p>{manu.api.desc}</p>
+        
+            <Nav /> 
+            {Object.keys(manu.api).length !== 0 && (
+                <>
+                    <h1>{manu.api.general.title}</h1>
+                    <p>{manu.api.general.desc}</p>
+                </> 
+           )}
          </section>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
-import '../styles/wallet.scss'
-
+    import '../styles/wallet.scss'
 const ConnectWallet = () => {
 
     return (

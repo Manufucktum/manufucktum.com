@@ -11,7 +11,7 @@ import '../styles/current-event.scss'
 const CurrentArtist = () => {
    
     const [manu, setManu] = useContext(ManuContext)
-
+console.log(manu)
     return (
        <div className="current-box">
             <div className="ref">
@@ -25,8 +25,8 @@ const CurrentArtist = () => {
         <div className="current">
             {Object.keys(manu.currentArtist).length !== 0 && (
                 <>
-                   <Link to="/live"> <h1>{manu.currentArtist.title}</h1>
-                    <h5>sound installation by {manu.currentArtist.artist.name}</h5></Link>
+                   <Link to="/live"> <h1>{manu.api.exibits[0].title}</h1>
+                    <h5>sound installation by {manu.currentArtist.name}</h5></Link>
                 </>
             )}            
         </div>

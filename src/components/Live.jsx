@@ -46,7 +46,7 @@ const Live = () => {
     return (
         <main className="main-container">
              <Nav /> 
-             <Interaction />
+           
             <section 
                 className="main-video-container" 
                 style={{
@@ -65,6 +65,7 @@ const Live = () => {
             > 
             
                 {infoComponent}
+                <Interaction />
                 <Footer />
             </section> 
         </main>
