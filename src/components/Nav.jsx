@@ -14,7 +14,7 @@ const Nav = () => {
                 <li className="nav-logo-container">
                     <NavLink activeclassname="active" to="/">
                         <svg viewBox="0 0 100 100" fill="white">
-                        <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" stroke="black" strokeWidth="6"/>
+                            <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" stroke="black" strokeWidth="6"/>
                         </svg>
                     </NavLink>
                 </li>

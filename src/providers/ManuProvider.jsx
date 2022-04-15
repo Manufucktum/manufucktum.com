@@ -1,14 +1,15 @@
 import React, { useEffect, useState, createContext } from 'react'
 
-import tempData from '../data/AprilData.json'
+import { randomColor } from '../helpers'
 
 export const ManuContext = createContext()
 
 const ManuProvider = ({ children }) => {
     const [manu, setManu] = useState({
-        currentInfoComponent: 'artist',
         api: {},
-        currentArtist:{}
+        currentArtist:{},
+        dark: '',
+        light: ''
     })
 
     useEffect(() => {
@@ -32,6 +33,14 @@ const ManuProvider = ({ children }) => {
     
         fetchData();
     }, []);
+
+    useEffect(() => {
+        setManu(state => ({
+            ...state,
+            light: randomColor(0, 44, 1),
+            dark: randomColor(250, 255, 1)
+        }))
+    }, [])
 
     return (
         <ManuContext.Provider
