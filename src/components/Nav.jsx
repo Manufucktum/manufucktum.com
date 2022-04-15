@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { ManuContext } from "../providers/ManuProvider";
 import { NavLink } from 'react-router-dom'
-import '../styles/nav.scss';
+
 import ConnectWallet from '../components/ConnectWallet'
+import '../styles/nav.scss';
 
 
 const Nav = () => {
@@ -23,7 +24,7 @@ const Nav = () => {
                 <li><NavLink activeclassname="active" to="/about">About</NavLink></li>
             </ul>
             <ConnectWallet/>
-        </nav>
+        </nav> 
     )
 }
 

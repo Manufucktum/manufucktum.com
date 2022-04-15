@@ -1,12 +1,22 @@
-import React from 'react'
-    import '../styles/wallet.scss'
+import React, { useContext } from 'react'
+import { motion } from 'framer-motion'
+import { ManuContext } from '../providers/ManuProvider'
+import '../styles/wallet.scss'
+
 const ConnectWallet = () => {
+    const [manu] = useContext(ManuContext)
+    console.log(manu)
 
     return (
-        <div className="wallet-container">
-            <button >
+        <div 
+            className="wallet-container"   
+        >
+            <motion.button
+                style={{ backgroundColor: manu.light, color: manu.dark, border: `1px solid ${manu.dark}` }}
+                whileHover={{ backgroundColor: manu.dark, color: manu.light }}
+            >
                Connect Wallet 
-            </button>
+            </motion.button>
         </div>
     )
 }

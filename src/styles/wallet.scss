@@ -1,8 +1,11 @@
 @import './vars.scss';
+
 .wallet-container {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+
     button {
-        // background-color: black;
-        color: $dark;
         font-family: "Courier Prime", sans-serif;
         border: 0;
         height: 35px;
@@ -15,9 +18,5 @@
         cursor: pointer;
         margin: 15px;
         display: flex;
-        &:hover {
-            background-color: $dark;
-            color: $light;
-        }
     }
 }

@@ -37,8 +37,8 @@ const ManuProvider = ({ children }) => {
     useEffect(() => {
         setManu(state => ({
             ...state,
-            light: randomColor(0, 44, 1),
-            dark: randomColor(250, 255, 1)
+            dark: randomColor(0, 44, 1),
+            light: randomColor(250, 255, 1)
         }))
     }, [])
 
