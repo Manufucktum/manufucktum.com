@@ -11,10 +11,8 @@ import Footer from '../components/Footer'
 import '../styles/main.scss'
 
 const Main = () => {
-
-  
-
     const [manu, setManu] = useContext(ManuContext)
+    console.log(manu)
     
 
     // const infoComponent = useMemo(() => {

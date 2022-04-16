@@ -1,52 +1,63 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion'
 import { ManuContext } from "../providers/ManuProvider";
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import ConnectWallet from '../components/ConnectWallet'
 import '../styles/nav.scss';
 
-
 const Nav = () => {
     const [manu, setManu] = useContext(ManuContext)
-
-    const activeLink = {
-        background: manu.dark,
-        color: manu.light
-    }
+    const location = useLocation()
+    console.log(location)
 
     return (
         <nav className="nav-container">
-            <ul className="nav-links">
-                <li className="nav-logo-container">
-                    <NavLink activeclassname={activeLink} to="/">
-                        <motion.svg 
-                            viewBox="0 0 100 100" 
-                            style={{
-                                fill: manu.light,
-                                stroke: manu.dark
-                            }}
-                            whileHover={{
-                                fill: manu.dark,
-                                stroke: manu.light
-                            }}
-                        >
-                            <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" strokeWidth="6" />
-                        </motion.svg>
-                    </NavLink>
-                </li>
+            <NavLink to="/" className="nav-logo-container" 
+                style={{ border: `solid 1px ${manu.dark}`, backgroundColor: location.pathname === '/' ? manu.dark : manu.light,}}
+            >
+                <motion.svg 
+                    viewBox="0 0 100 100" 
+                    style={{
+                        fill: location.pathname === '/' ? manu.dark : manu.light,
+                        stroke: location.pathname === '/' ? manu.light : manu.dark,
+                    }}
+                    whileHover={{
+                        stroke: "green"
+                    }}
+                >
+                    <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" strokeWidth="4" />
+                </motion.svg>
+            </NavLink>
+            <ul className="nav-links" style={{ borderTop: `2px solid ${manu.dark}` }}>  
                 <motion.li
-                    style={{ backgroundColor: manu.light, color: manu.dark }}
+                    style={{ 
+                        backgroundColor: location.pathname === '/live' ? manu.dark : manu.light,
+                        color: location.pathname === '/live' ? manu.light : manu.dark, 
+                    }}
                     whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                ><NavLink activeclassname="active" to="/live">Live</NavLink></motion.li>
+                >
+                    <NavLink to="/live">Live</NavLink>
+                </motion.li>
                 <motion.li
-                    style={{ backgroundColor: manu.light, color: manu.dark }}
+                    style={{ 
+                        backgroundColor: location.pathname === '/collections' ? manu.dark : manu.light,
+                        color: location.pathname === '/collections' ? manu.light : manu.dark, 
+                    }}
                     whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                ><NavLink activeclassname="active" to="/collections">Collections</NavLink></motion.li>
+                >
+                    <NavLink to="/collections">Collections</NavLink>
+                </motion.li>
                 <motion.li
-                    style={{ backgroundColor: manu.light, color: manu.dark }}
+                    style={{ 
+                        backgroundColor: location.pathname === '/about' ? manu.dark : manu.light,
+                        color: location.pathname === '/about' ? manu.light : manu.dark,
+                        borderBottomRightRadius: 5
+                    }}
                     whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                ><NavLink activeclassname="active" to="/about">About</NavLink></motion.li>
+                >
+                    <NavLink to="/about">About</NavLink>
+                </motion.li>
             </ul>
             <ConnectWallet/>
         </nav> 

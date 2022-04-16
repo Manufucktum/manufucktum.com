@@ -12,7 +12,12 @@ const ConnectWallet = () => {
             className="wallet-container"   
         >
             <motion.button
-                style={{ backgroundColor: manu.light, color: manu.dark, border: `1px solid ${manu.dark}` }}
+                style={{ 
+                    backgroundColor: manu.light, 
+                    color: manu.dark, 
+                    border: `1px solid ${manu.dark}`,
+                    borderBottomLeftRadius : 5 
+                }}
                 whileHover={{ backgroundColor: manu.dark, color: manu.light }}
             >
                Connect Wallet 

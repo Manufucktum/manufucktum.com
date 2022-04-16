@@ -22,84 +22,22 @@
     list-style: none;
     
     li {
-        font-weight: 200;
+        font-weight: 400;
         line-height: 45px;
         height: 45px;
         overflow: hidden;
         font-size: 14px;
+        padding: 0 30px;
+
         a {
+            color: inherit;
             text-decoration: none;
-            padding: 5px;
-            cursor: pointer;
-            color: $dark;
-            &:hover {
-                background-color: $dark;
-                color: $light;
-            }
-            &.active {
-                background-color: $dark;
-                color: $light;
-            }
         }
     }
 }
 
 .nav-logo-container {
-    height: 45px;
-    // border: 2px solid $dark;
-    width: 45px;
+    height: 47px;
+    width: 47px;
     box-sizing: border-box;
-    a {
-        display: block;
-        padding: 0!important;
-        &.active {
-            background-color: $dark;
-            color: $light;
-            svg {
-                fill: $dark;
-            }
-            svg path {
-                stroke: $light;
-            }
-        }
-    }
-    &:hover {
-        background-color: $dark;
-        svg {
-            fill: $dark;
-        }
-        svg path {
-            stroke: $light;
-        }
-    }
-    svg path {
-        width: 100%;
-        stroke: $dark;
-    }
-}
-
-.nav-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    border-top: 2px solid $dark;
-    border-bottom: 2px solid $dark;
-    border-right: 2px solid $dark;
-    // margin: 3px;
-    flex-grow: 1;
-    margin: 0;
-    cursor: pointer;
-    li {
-        font-weight: 200;
-        opacity: .7;
-        font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .nav-link {
-        font-size: 13px;
-    }
 }
