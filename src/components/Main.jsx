@@ -12,16 +12,6 @@ import '../styles/main.scss'
 
 const Main = () => {
     const [manu, setManu] = useContext(ManuContext)
-    console.log(manu)
-    
-
-    // const infoComponent = useMemo(() => {
-    //         if (manu.currentInfoComponent === 'about') {
-    //             return <About />
-    //         } else {
-    //             return <CurrentArtist />
-    //         }
-    // }, [manu.currentInfoComponent])
 
     return (
         <main className="main-container">

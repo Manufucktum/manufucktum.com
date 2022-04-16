@@ -5,7 +5,6 @@ import '../styles/wallet.scss'
 
 const ConnectWallet = () => {
     const [manu] = useContext(ManuContext)
-    console.log(manu)
 
     return (
         <div 
