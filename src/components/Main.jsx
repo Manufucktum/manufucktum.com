@@ -1,23 +1,23 @@
-import React, { useState, useEffect, useMemo, useContext } from 'react'
+import React, { useContext } from 'react'
 import { ManuContext } from '../providers/ManuProvider'
-import { useWindowSize } from '../hooks/useWindowSize'
 
-import About from '../components/About'
 import CurrentEvent from '../components/CurrentEvent'
 import Nav from '../components/Nav'
-import Video from '../components/Video'
 import Footer from '../components/Footer'
 
 import '../styles/main.scss'
 
 const Main = () => {
-    const [manu, setManu] = useContext(ManuContext)
+    const [manu] = useContext(ManuContext)
 
     return (
-        <main className="main-container">
+        <main 
+            className="main-container"
+            style={{ backgroundColor: manu.light }}
+        >
             <Nav /> 
             <div className="main-body">
-            <CurrentEvent />
+                <CurrentEvent />
             </div>
             <Footer />
         </main>

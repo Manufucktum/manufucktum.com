@@ -7,14 +7,19 @@ import ConnectWallet from '../components/ConnectWallet'
 import '../styles/nav.scss';
 
 const Nav = () => {
-    const [manu, setManu] = useContext(ManuContext)
+    const [manu] = useContext(ManuContext)
     const location = useLocation()
     console.log(location)
 
     return (
         <nav className="nav-container">
-            <NavLink to="/" className="nav-logo-container" 
-                style={{ border: `solid 1px ${manu.dark}`, backgroundColor: location.pathname === '/' ? manu.dark : manu.light,}}
+            <NavLink 
+                to="/" 
+                className="nav-logo-container" 
+                style={{ 
+                    border: `solid 1px ${manu.dark}`, 
+                    backgroundColor: location.pathname === '/' ? manu.dark : manu.light
+                }}
             >
                 <motion.svg 
                     viewBox="0 0 100 100" 
@@ -23,7 +28,9 @@ const Nav = () => {
                         stroke: location.pathname === '/' ? manu.light : manu.dark,
                     }}
                     whileHover={{
-                        stroke: "green"
+                        stroke: manu.light,
+                        fill: manu.dark,
+                        backgroundColor: manu.dark
                     }}
                 >
                     <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" strokeWidth="4" />
