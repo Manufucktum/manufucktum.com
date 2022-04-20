@@ -23,7 +23,7 @@ const CurrentArtist = () => {
                 {Object.keys(manu.currentArtist).length !== 0 && (
                     <>
                         <Link to="/live"> 
-                            <h1>{manu.api.exibits[0].title}</h1>
+                            <h1>{manu.api.exhibits[0].title}</h1>
                             <h5>sound installation by {manu.currentArtist.name}</h5>
                         </Link>
                     </>

@@ -44,10 +44,10 @@ const CurrentArtist = () => {
                     </div>
                     <h5>{manu.api.artist[0].title}</h5>
                     <p><b>Progress:</b> 3/10 </p>
-                    <p><b>Size:</b> {manu.api.exibits[0].width}cm x {manu.api.exibits[0].height}cm x {manu.api.exibits[0].depths}cm </p>
-                    <p><b>Materials:</b> {manu.api.exibits[0].materials}</p>
+                    <p><b>Size:</b> {manu.api.exhibits[0].width}cm x {manu.api.exhibits[0].height}cm x {manu.api.exhibits[0].depths}cm </p>
+                    <p><b>Materials:</b> {manu.api.exhibits[0].materials}</p>
                   
-               <p>{manu.api.exibits[0].description}</p> 
+               <p>{manu.api.exhibits[0].description}</p> 
                     <div className="current-artist-nfts">
                         {/* <h3>NFTs</h3> */}
                         {/* <Lightbox width={dimensionsVideo.width} height={dimensionsVideo.width} videos={data.currentArtist.nfts}/> */}
