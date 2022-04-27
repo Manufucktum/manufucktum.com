@@ -1,0 +1,75 @@
+{
+    "general": {
+        "title": "Manufucktum",
+        "short_desc": "",
+        "desc": "For some time now we have seen digital art evolve around NFT's and with it comes a whole newset of possibilities.Especially things like Artist royalties and usage rights are also a great tool for analog artists*  to market their works independently.With Manufucktum, we are creating an interface for artists to continue working in analogue and yet open up the space to the digital world of NFTs and their community.",
+        "instagram": "https://instagram.com/manufucktum",
+        "discord": "https://discord.gg/MTFdv9Day6",
+        "twitter": "",
+        "mintable": "",
+        "imx": ""
+    },
+    "artist": [{
+        "id": "matthew-push",
+        "name": "Matthew Push",
+        "bio": "",
+        "instagram": "",
+        "website": ""
+
+    }],
+    "exhibits": [{
+        "id": "current-turbulences-under-observation",
+        "title": "Current turbulences under observation",
+        "description": "In this first exibition, the artist Matthew Push fills our space with his deconstruction of a wind chime. Dissected into its individual parts and connected by invisible threads, which are equipped with paper kites, so the sound game is stimulated by a fan periodically alternating at two points by the turbulence generated. The repetitions(iterations) overlap and create their own dynamics in rhythm and intensity through the linked(interdependent) thread system.The installation can be viewed live for 2 weeks.The artist deconstructed the sound into 10 audio - visual frames that represent different emotions and thusset the sound experience in its own context. The interplay of these emotional frames with the iteratively stimulated sound is also to be understood as an allegory of Jaques Derrida 's concept of iteration. The frames each symbolise a framework that our senses creates in the context of a social setting - through emotions, but also in the form of interpretive patterns and classifications - and, by this, involve the observer in the experience of subjective perception.The first of these 5 emotional frames have been available as NFT since the start of the exhibition.The other 5 will be created during the 2 - week live performance and will also be available as NFTs afterwards.",
+        "materials": "wood, metall, nylon thread, tape, contact microphone, FX device",
+        "artist": "matthew-push",
+        "start_date": 1649455200,
+        "end_date": 1650664800,
+        "width": "200",
+        "height": "200",
+        "depths": "200"
+    }],
+    "nfts": [{
+        "id": 0,
+        "title": "Serenity",
+        "artist_id": "matthew-push",
+        "mint_date": 1649455200,
+        "description": "dasd",
+        "series_length": 10,
+        "exhibit_id": "current-turbulences-under-observation",
+        "content_type": "audio",
+        "materials": ["wood", "metall", "nylon thread", "tape", "contact microphone", "FX device"],
+        "series_number": 1,
+        "file": "https://api.manufucktum.com/matthewpush/serenity.m4v",
+        "mintable_link": "https://mintable.app/m/item/m/0x2880c6ecf2f770bd31ddb0d776cc81048899b600:37593595335421240198695259985465321504592777426510626828496280554210198123785"
+
+    }, {
+        "id": 1,
+        "title": "Bliss",
+        "artist_id": "matthew-push",
+        "mint_date": 1649455200,
+        "description": "dasd",
+        "series_length": 10,
+        "exhibit_id": "current-turbulences-under-observation",
+        "content_type": "audio",
+        "materials": ["wood", "metall", "nylon thread", "tape", "contact microphone", "FX device"],
+        "series_number": 2,
+        "file": "https://api.manufucktum.com/matthewpush/bliss.m4v",
+        "mintable_link": "https://mintable.app/m/item/m/0x2880c6ecf2f770bd31ddb0d776cc81048899b600:37593595335421240198695259985465321504592777426510626828496280554210198123785"
+
+    }, {
+        "id": 2,
+        "title": "Clarity",
+        "artist_id": "matthew-push",
+        "mint_date": 1649455200,
+        "description": "dasd",
+        "series_length": 10,
+        "exhibit_id": "current-turbulences-under-observation",
+        "content_type": "audio",
+        "materials": ["wood", "metall", "nylon thread", "tape", "contact microphone", "FX device"],
+        "series_number": 3,
+        "file": "https://api.manufucktum.com/matthewpush/clarity.m4v",
+        "mintable_link": "https://mintable.app/m/item/m/0x2880c6ecf2f770bd31ddb0d776cc81048899b600:37593595335421240198695259985465321504592777426510626828496280554210198123785"
+    }]
+
+}

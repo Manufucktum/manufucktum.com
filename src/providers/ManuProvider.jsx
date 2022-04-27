@@ -2,12 +2,14 @@ import React, { useEffect, useState, createContext } from 'react'
 
 import { randomColor } from '../helpers'
 
+import fallbackData from '../data/projects'
+
 export const ManuContext = createContext()
 
 const ManuProvider = ({ children }) => {
     const [manu, setManu] = useState({
         api: {},
-        currentArtist:{},
+        currentArtist: {},
         dark: '',
         light: ''
     })
@@ -27,6 +29,11 @@ const ManuProvider = ({ children }) => {
                 currentArtist: json.artist[0]
             }))
           } catch (error) {
+            setManu(state => ({
+                ...state, 
+                api: fallbackData,
+                currentArtist: fallbackData.artist[0]
+            })) 
             console.log("error", error);
           }
         };

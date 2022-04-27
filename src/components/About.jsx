@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ManuContext } from '../providers/ManuProvider'
+import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
@@ -10,7 +11,11 @@ const About = () => {
     console.log(manu);
 
     return (
-        <section 
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "linear" }}
             className="about-container"
             style={{ backgroundColor: manu.light, color: manu.dark }}
         > 
@@ -23,7 +28,7 @@ const About = () => {
                     </div> 
                 )}
             <Footer />
-         </section>
+         </motion.section>
     )
 }
 

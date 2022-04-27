@@ -17,23 +17,20 @@ const Nav = () => {
                 to="/" 
                 className="nav-logo-container" 
                 style={{ 
-                    border: `solid 1px ${manu.dark}`, 
-                    backgroundColor: location.pathname === '/' ? manu.dark : manu.light
+                    backgroundColor: manu.dark
                 }}
             >
                 <motion.svg 
                     viewBox="0 0 100 100" 
-                    style={{
-                        fill: location.pathname === '/' ? manu.dark : manu.light,
-                        stroke: location.pathname === '/' ? manu.light : manu.dark,
-                    }}
-                    whileHover={{
-                        stroke: manu.light,
-                        fill: manu.dark,
-                        backgroundColor: manu.dark
-                    }}
                 >
-                    <path d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" strokeWidth="4" />
+                    <path 
+                        d="M39.5 32L61 68.5H82L61 32L39.5 68.5H18L39.5 32Z" 
+                        strokeWidth="4" 
+                        style={{
+                            fill: manu.dark,
+                            stroke: manu.light
+                        }}    
+                    />
                 </motion.svg>
             </NavLink>
             <ul className="nav-links" style={{ borderTop: `2px solid ${manu.dark}` }}>  
