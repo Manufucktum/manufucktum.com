@@ -29,11 +29,11 @@ const Nav = () => {
                         style={{
                             fill: manu.dark,
                             stroke: manu.light
-                        }}    
+                        }}
                     />
                 </motion.svg>
             </NavLink>
-            <ul className="nav-links" style={{ borderTop: `2px solid ${manu.dark}` }}>  
+            <ul className="nav-links" >  
                 <motion.li
                     style={{ 
                         backgroundColor: location.pathname === '/live' ? manu.dark : manu.light,

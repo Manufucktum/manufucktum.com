@@ -29,6 +29,12 @@
         font-size: 14px;
         padding: 0 30px;
 
+        @media screen and (min-width: $tablet) {
+            line-height: 55px;
+            height: 55px;
+            font-size: 18px;
+        }
+
         a {
             color: inherit;
             text-decoration: none;
@@ -41,6 +47,18 @@
     width: 47px;
     box-sizing: border-box;
     margin-top: 1px;
+
+    @media screen and (min-width: $tablet) {
+        width: 66px;
+        height: 66px;
+        margin-top: 22px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 77px;
+        height: 77px;
+        margin-top: 33px;
+    }
     
     svg {
         width: 100%;

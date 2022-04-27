@@ -1,6 +1,6 @@
 @import './vars.scss';
 
-.about-container {
+.collections-container {
     display: flex;
     flex-direction: column;
     // justify-content: center;
@@ -10,15 +10,5 @@
     padding-bottom: 50px;
     // border: 2px solid #25282A;
 
-    h1 {
-        color: $dark;
-    }
     
-    p {
-        font-size: 13px;
-        line-height: 18px;
-        color: $dark;
-        // max-width: 400px;
-        opacity: .7;
-    }
 }

@@ -8,7 +8,6 @@ import '../styles/about.scss'
 
 const About = () => {
     const [manu]  = useContext(ManuContext)
-    console.log(manu);
 
     return (
         <motion.section
@@ -24,7 +23,9 @@ const About = () => {
                 {Object.keys(manu.api).length !== 0 && (
                     <div className="about-info">
                         <h1>{manu.api.general.title}</h1>
-                        <p>{manu.api.general.desc}</p>
+                        <div className="about-box">
+                            <p>{manu.api.general.desc}</p>
+                        </div> 
                     </div> 
                 )}
             <Footer />
