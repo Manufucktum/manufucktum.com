@@ -36,6 +36,7 @@ const CurrentArtist = () => {
                         <Link to="/live"> 
                             <h1>{manu.api.exhibits[0].title}</h1>
                             <h5>sound installation by <br />{manu.currentArtist.name}</h5>
+
                         </Link>
                     </>
                 )}            

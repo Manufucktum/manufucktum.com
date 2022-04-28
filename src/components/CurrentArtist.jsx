@@ -20,7 +20,6 @@ const CurrentArtist = () => {
                     <p><b>Progress:</b> 3/10 </p>
                     <p><b>Size:</b> {manu.api.exhibits[0].width}cm x {manu.api.exhibits[0].height}cm x {manu.api.exhibits[0].depths}cm </p>
                     <p><b>Materials:</b> {manu.api.exhibits[0].materials}</p>
-                  
                     <p>{manu.api.exhibits[0].description}</p> 
                     <a 
                         href="/collections"
@@ -29,6 +28,7 @@ const CurrentArtist = () => {
                     >
                         Check out the NFTs in the Collection
                     </a>
+
                 </>
             )}            
         </div>
