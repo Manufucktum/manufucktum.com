@@ -27,6 +27,14 @@
         height: 32px;
         line-height: 50px;
         padding-top: 13px;
+        transform: rotate(90deg);
+        margin-top: 4px;
+
+
+        @media screen and (min-width: 800px) {
+            transform: rotate(0deg);
+            margin-top: 0;
+        }
         svg {
             width: 60px;
             height: 37px;
@@ -34,4 +42,8 @@
             right: 20px;
         }
     }
+}
+
+.interaction-timer {
+    margin: 0 0 0 10px;
 }

@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { ManuContext } from '../providers/ManuProvider'
 import { useWindowSize } from '../hooks/useWindowSize'
 
-import About from '../components/About'
 import CurrentArtist from '../components/CurrentArtist'
 import Nav from '../components/Nav'
 import Video from '../components/Video'
@@ -35,14 +34,6 @@ const Live = () => {
         setDimensionsContent(state => ({ ...state, width: size.width - size.height }))
     }, [size.width, size.height])
 
-    const infoComponent = useMemo(() => {
-            if (manu.currentInfoComponent === 'about') {
-                return <About />
-            } else {
-                return <CurrentArtist />
-            }
-    }, [manu.currentInfoComponent])
-
     return (
         <main className="main-container">
              <Nav /> 
@@ -63,9 +54,8 @@ const Live = () => {
                     overflowY: size.width >= 800 ? 'auto' : null
                 }} 
             > 
-            
-                {infoComponent}
                 <Interaction />
+                <CurrentArtist />
                 <Footer />
             </section> 
         </main>

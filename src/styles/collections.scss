@@ -3,12 +3,27 @@
 .collections-container {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-items: flex-start;
-    height: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    // border: 2px solid #25282A;
+    min-height: 100vh;
+    padding: 75px 0;
+}
 
-    
+.collections-artist {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.colections-link {
+    background: rgba(0,0,0,.9);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity .5s ease;
+
+    &:hover {
+        opacity: 0.9;
+        transition: opacity .5s ease; 
+    }
 }

@@ -17,7 +17,7 @@ const Interaction = () => {
                         <polygon  points="36.7,10.8 6,10.8 15.2,2.2 13.2,0 0,12.3 13.2,24.5 15.2,22.3 6,13.8 36.7,13.8 "/>
                     </svg>
                 </span> Push the Button   
-                <span className="interaction-timer">10 sec</span>
+                <span className="interaction-timer"> - 10 sec</span>
             </button>
         </div>
     )
