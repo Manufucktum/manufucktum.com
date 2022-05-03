@@ -27,11 +27,11 @@ const Live = () => {
         } else {
             setDimensionsVideo(state => ({ 
                 ...state,
-                height: size.height,
-                width: size.height
+                height: size.height-45,
+                width: size.height-45
             }))
         }
-        setDimensionsContent(state => ({ ...state, width: size.width - size.height }))
+        setDimensionsContent(state => ({ ...state, width: size.width - size.height +45 }))
     }, [size.width, size.height])
 
     return (
@@ -50,13 +50,13 @@ const Live = () => {
             <section 
                 className="info-container" 
                 style={{
-                    width: size.width >= 800 ? dimensionsContent.width : 'calc(100% - 30px)',
+                    width: size.width >= 800 ? dimensionsContent.width : '100%',
                     overflowY: size.width >= 800 ? 'auto' : null
                 }} 
             > 
                 <Interaction />
                 <CurrentArtist />
-                <Footer />
+      
             </section> 
         </main>
     )

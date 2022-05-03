@@ -15,10 +15,8 @@ const Collections = () => {
     return (
         <motion.div 
             className="collections-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "linear" }}
+          
+       
             style={{ backgroundColor: manu.light }}
         >
             <Nav/>

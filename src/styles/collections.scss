@@ -1,5 +1,4 @@
 @import './vars.scss';
-
 .collections-container {
     display: flex;
     flex-direction: column;
@@ -15,15 +14,14 @@
 }
 
 .colections-link {
-    background: rgba(0,0,0,.9);
+    background: rgba(0, 0, 0, .9);
     color: white;
     padding: 10px 15px;
     text-decoration: none;
-    opacity: 0.7;
+    // opacity: 0.7;
     transition: opacity .5s ease;
-
     &:hover {
-        opacity: 0.9;
-        transition: opacity .5s ease; 
+        // opacity: 0.9;
+        transition: opacity .5s ease;
     }
 }

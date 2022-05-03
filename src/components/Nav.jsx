@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { motion } from 'framer-motion'
+ import { motion } from 'framer-motion'
 import { ManuContext } from "../providers/ManuProvider";
 import { NavLink, useLocation } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ import '../styles/nav.scss';
 const Nav = () => {
     const [manu] = useContext(ManuContext)
     const location = useLocation()
-    console.log(location)
+    // console.log(location)
 
     return (
         <nav className="nav-container">
@@ -34,34 +34,27 @@ const Nav = () => {
                 </motion.svg>
             </NavLink>
             <ul className="nav-links" >  
-                <motion.li
-                    style={{ 
+                <li>
+                    <NavLink to="/live"  style={{ 
                         backgroundColor: location.pathname === '/live' ? manu.dark : manu.light,
                         color: location.pathname === '/live' ? manu.light : manu.dark, 
                     }}
-                    whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                >
-                    <NavLink to="/live">Live</NavLink>
-                </motion.li>
-                <motion.li
-                    style={{ 
+                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Live</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/collections"  style={{ 
                         backgroundColor: location.pathname === '/collections' ? manu.dark : manu.light,
                         color: location.pathname === '/collections' ? manu.light : manu.dark, 
                     }}
-                    whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                >
-                    <NavLink to="/collections">Collections</NavLink>
-                </motion.li>
-                <motion.li
-                    style={{ 
+                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Collections</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/about" style={{ 
                         backgroundColor: location.pathname === '/about' ? manu.dark : manu.light,
-                        color: location.pathname === '/about' ? manu.light : manu.dark,
-                        borderBottomRightRadius: 5
+                        color: location.pathname === '/about' ? manu.light : manu.dark
                     }}
-                    whileHover={{ backgroundColor: manu.dark, color: manu.light }}
-                >
-                    <NavLink to="/about">About</NavLink>
-                </motion.li>
+                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>About</NavLink>
+                </li>
             </ul>
             <ConnectWallet/>
         </nav> 

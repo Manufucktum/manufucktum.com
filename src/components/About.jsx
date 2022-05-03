@@ -11,9 +11,7 @@ const About = () => {
 
     return (
         <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          
             transition={{ duration: 1, ease: "linear" }}
             className="about-container"
             style={{ backgroundColor: manu.light, color: manu.dark }}
