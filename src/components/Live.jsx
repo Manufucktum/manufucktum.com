@@ -45,7 +45,7 @@ const Live = () => {
                     height: dimensionsVideo.height
                 }} 
             >
-                <Video />
+                <Video manu={manu} />
             </section>
             <section 
                 className="info-container" 

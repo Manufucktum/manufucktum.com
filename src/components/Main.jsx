@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ManuContext } from '../providers/ManuProvider'
 import { motion } from 'framer-motion'
 
+import CollectionsOverview from '../components/CollectionsOverview'
 import CurrentEvent from '../components/CurrentEvent'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -15,6 +16,7 @@ const Main = () => {
       <>
             <Nav /> 
             <CurrentEvent />
+            <CollectionsOverview/>
             <Footer />
             </>
     )

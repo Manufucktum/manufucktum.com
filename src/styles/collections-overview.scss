@@ -1,0 +1,93 @@
+@import './vars.scss';
+.collectionsview-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 75px 0 0 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.collections-artist {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.collectionsoverview-nfts {
+    display: flex;
+    padding: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.collections-nft {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    h3 {
+        margin-top: 0;
+    }
+    .collections-image {
+        width: 40%;
+    }
+    .collections-desc {
+        padding: 15px;
+        box-sizing: border-box;
+        width: 60%;
+    }
+}
+
+.colectionsoverview-link {
+    background: rgba(0, 0, 0, .9);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    // opacity: 0.7;
+    transition: opacity .5s ease;
+    display: block;
+    font-size: 20px;
+    line-height: 21px;
+    font-weight: 700;
+    &:hover {
+        // opacity: 0.9;
+        transition: opacity .5s ease;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .collections-nft {
+        display: flex;
+        flex-wrap: wrap;
+        width: 48%;
+        margin: 1%;
+        .collections-image {
+            width: 100%;
+        }
+        .collections-desc {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .collections-nfts {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .collections-nft {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .collections-image {
+            width: 100%;
+        }
+        .collections-desc {
+            width: 100%;
+        }
+    }
+}
