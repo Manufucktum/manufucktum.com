@@ -2,14 +2,18 @@
 .nav-container {
     display: flex;
     position: fixed;
+    flex-wrap: wrap;
     z-index: 101;
     top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
+    right: 0;
+    // width: 100%;
+    // background-color: white;
     height: 45px;
     justify-content: flex-start;
     align-items: center;
+    @media screen and (max-width: $tablet) {
+        left: 0 !important;
+    }
 }
 
 .nav-links {
@@ -39,7 +43,8 @@
             padding: 0 30px;
             text-decoration: none;
             &:hover {
-                color: white;
+                // color: white;
+                text-decoration: underline;
             }
         }
     }
@@ -49,6 +54,7 @@
     height: 45px;
     width: 45px;
     box-sizing: border-box;
+    padding: 0!important;
     // margin-top: 1px;
     // @media screen and (min-width: $tablet) {
     //     width: 66px;
@@ -63,5 +69,76 @@
     svg {
         width: 100%;
         height: 100%;
+    }
+}
+
+.sidebar-links {
+    list-style: none;
+    li {
+        font-weight: 400;
+        line-height: 45px;
+        height: 45px;
+        overflow: hidden;
+        list-style: none;
+        font-size: 14px;
+        // @media screen and (min-width: $tablet) {
+        //     line-height: 55px;
+        //     height: 55px;
+        //     font-size: 18px;
+        // }
+        a {
+            color: inherit;
+            display: block;
+            line-height: 45px;
+            padding: 0 30px;
+            text-decoration: none;
+            &:hover {
+                // color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sidebar {
+    z-index: 1001!important;
+    width: 300px;
+    position: fixed!important;
+}
+
+.sidebar-bg {
+    z-index: 1000!important;
+}
+
+.sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.sidebarmenu {
+    display: none;
+}
+
+.burgermenu {
+    position: fixed;
+    right: 25px;
+    border: 0;
+    z-index: 1000;
+    display: none;
+    top: 10px;
+    background-color: transparent;
+}
+
+@media only screen and (max-width:769px) {
+    .burgermenu {
+        display: block;
+    }
+    .sidebarmenu {
+        display: block;
+        &>div {
+            inset: unset;
+        }
     }
 }

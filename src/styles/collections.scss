@@ -19,10 +19,41 @@
             margin-top: 50px;
         }
         
+        .collection-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            .collection-title {
+                width: 100%;
+                font-family: "archivo";
+            }
+            .collection-preview {
+                width: 30%;
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                }
+            }
+            .collection-desc {
+                width: 70%;
+                padding: 0 15px;
+                box-sizing: border-box;
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                    padding: 0;
+                }
+                p {
+                    margin-top: 0;
+                    @media only screen and (max-width: $tablet) {
+                        padding: 25px 0;
+                    }
+                }
+            }
+        }
+        
         .collections-nft {
             display: flex;
             flex-wrap: wrap;
             width: 50%;
+            margin-bottom: 25px;
             h3 {
                 margin-top: 0;
             }
@@ -30,9 +61,12 @@
                 width: 40%;
             }
             .collections-desc {
-                padding: 15px;
+                padding: 0 15px;
                 box-sizing: border-box;
                 width: 60%;
+                @media only screen and (max-width: $tablet) {
+                    padding: 0px;
+                }
             }
         }
         
@@ -74,6 +108,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
+                margin: auto 0;
                 .collections-image {
                     width: 100%;
                 }

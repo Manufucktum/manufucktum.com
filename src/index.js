@@ -12,6 +12,8 @@ import Main from './components/Main'
 import Live from './components/Live'
 import About from './components/About'
 import Collections from './components/Collections'
+import Artists from './components/Artists'
+import Artist from './components/Artist'
 import reportWebVitals from './reportWebVitals'
 
 const container = document.getElementById('root')
@@ -24,7 +26,8 @@ root.render(
         <Routes>
           <Route path="/" element={<Main/>} key="main" />
           <Route path="/live" element={<Live/>} key="live" />
-          <Route path="/collections" element={<Collections/>} key="collections" />
+          <Route path="/collections" element={<Artists/>} key="collections" />
+          <Route path="/collections/:id" element={<Artist/>} key="collection" />
           <Route path="/about" element={<About/>} key="about" />
           <Route path="/imprint" element={<Live/>} />
         </Routes>

@@ -6,14 +6,24 @@ import { NavLink, useLocation } from 'react-router-dom'
 import ConnectWallet from '../components/ConnectWallet'
 import '../styles/nav.scss';
 
-const Nav = () => {
+const Nav = ({width}) => {
     const [manu] = useContext(ManuContext)
     const location = useLocation()
+
     // console.log(location)
 
     return (
-        <nav className="nav-container">
-            <NavLink 
+        <nav className="nav-container"  style={{
+            width:width,
+            left: location.pathname === '/live' ? "auto": 0,
+            right: location.pathname === '/live' ? 0:"auto"
+          
+        }} >
+          
+            <ul className="nav-links" >  
+                <li> 
+                    
+             <NavLink 
                 to="/" 
                 className="nav-logo-container" 
                 style={{ 
@@ -32,8 +42,7 @@ const Nav = () => {
                         }}
                     />
                 </motion.svg>
-            </NavLink>
-            <ul className="nav-links" >  
+            </NavLink></li>
                 <li>
                     <NavLink to="/live"  style={{ 
                         backgroundColor: location.pathname === '/live' ? manu.dark : manu.light,

@@ -9,15 +9,14 @@ import '../styles/collections.scss'
 
 const Collections = () => {
     const [manu]  = useContext(ManuContext);
-   
+   console.log(manu)
     return (
         <motion.div 
             className="collections-container"
-          
-       
             style={{ backgroundColor: manu.light }}
         >
-            <Nav/>
+               <Nav />    
+        
 
             {Object.keys(manu.api).length !== 0 && (
                 <div className="collections-artist" style={{ color: manu.dark }}>
@@ -31,28 +30,37 @@ const Collections = () => {
                                    <ReactPlayer
                                     url= {nft.file }
                                     width="500"
+                                  controls
+                                  pip={false}
+                                  config={{
+                                    file: {
+                                      attributes: {
+                                        controlsList: "nodownload noremoteplayback noplaybackrate",
+                                        playsInline: true,
+                                      },
+                                    },
+                                  }}
+                                    muted={true}
+                                    loop={true}
+                                    playing={false}
+                                    playsinline={true}
                                     height="500"
                                     className="collections-"
                                 />
                                 </div>
                                 <div className="collections-desc">
-                                <h3>{nft.title}</h3>
+                                <h1>{nft.nft_title}</h1>
+                                <b>{nft.title}</b>
                              
                                
                                 <p>material: {nft.materials.map(material => `${material}, `)}</p>
-                                <p>Minting on: {new Date(nft.mint_date*1000).toLocaleDateString('en-GB')}</p>
+                                <p>{nft.minted ? "Minted on: " : "Minting on: " }{new Date(nft.mint_date*1000).toLocaleDateString('de-DE')}</p>
                                 <p>{nft.series_number} of {nft.series_length}</p>
                                 {nft.minted ? 
-                                    <a 
-                                        href={nft.mintable_link}
-                                        className="colections-link"
-                                        style={{backgroundColor: manu.dark }}>
-                                            
-                                        Buy NFT on Mintable
-                                    </a> : ''
+                                    <a  target="_blank" href={nft.opensea_link}  className="colections-link"  style={{backgroundColor: manu.dark }}>Buy NFT on Opensea</a> : ''
                                 }
-                                { new Date().getTime() < nft.mint_date*1000 ? 
-                                    <a href="#"  className="colections-link" style={{ backgroundColor: manu.dark }}>Processing <div className="lds-dual-ring"></div></a> 
+                                { new Date().getTime() > nft.mint_date*1000 && !nft.minted ? 
+                                    <a href="#" className="colections-link" style={{ backgroundColor: manu.dark }}>Processing <div className="lds-dual-ring"></div></a> 
                                     : ''
                                 }
                                 </div>
@@ -60,9 +68,10 @@ const Collections = () => {
                         ))}
                     </div>
                 </div> 
+                
             )}
-
-            <Footer />
+                 {/* <Sidebarmenu/> */}
+                 <Footer/>
         </motion.div>
     )
 }

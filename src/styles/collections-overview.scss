@@ -14,30 +14,65 @@
     margin: 0 5%;
 }
 
+.collectionsview-artist {
+    h1 {
+        font-family: "Archivo";
+        font-weight: 100;
+    }
+    .main-ref {
+        width: 45%;
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+}
+
 .collectionsoverview-nfts {
     display: flex;
-    padding: 25px;
+    // padding: 25px;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
-    border-width: 4px;
-    border-style: solid;
+    // border-width: 4px;
+    // border-style: solid;
+    .collections-desc {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}
+
+.collectionsoverview-nfts {
+    .collectionsoverview-image {
+        width: 45%;
+    }
+    .collectionsoverview-desc {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 55%;
+    }
 }
 
 .collections-nft {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+    text-decoration: none;
+    color: inherit;
+    h1 {
+        margin-top: 0;
+        font-family: 'Archivo';
+        font-weight: 600;
+        font-size: 26px;
+    }
     h3 {
         margin-top: 0;
+        font-family: 'Archivo';
+        font-weight: 600;
+        font-size: 18px;
     }
-    .collections-image {
-        width: 40%;
-    }
-    .collections-desc {
-        padding: 15px;
-        box-sizing: border-box;
-        width: 60%;
+    p {
+        font-family: 'Courier Prime';
+        font-weight: 200;
     }
 }
 
@@ -58,36 +93,44 @@
     }
 }
 
-@media only screen and (max-width:769px) {
+@media only screen and (max-width:$tablet) {
+    .collections-nfts {
+        display: flex;
+        flex-wrap: wrap;
+        // width: 48%;
+        // margin: 1%;
+    }
     .collections-nft {
         display: flex;
         flex-wrap: wrap;
-        width: 48%;
-        margin: 1%;
-        .collections-image {
+        width: 100%;
+        .collectionsoverview-image {
             width: 100%;
         }
-        .collections-desc {
+        .collectionsoverview-desc {
             width: 100%;
         }
     }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:$mobile) {
     .collections-nfts {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin: 0%;
     }
     .collections-nft {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        .collections-image {
+        .collectionsoverview-image {
             width: 100%;
         }
-        .collections-desc {
+        .collectionsoverview-desc {
             width: 100%;
+            margin-top: 15px;
+            padding: 0;
         }
     }
 }

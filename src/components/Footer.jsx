@@ -23,18 +23,18 @@ const Footer = () => {
                 >
                     Discord
                 </a>
-                <a
+                {/* <a
                     href="/faq"
                     style={{ color: manu.dark }}
                 >
                     F.A.Q.
-                </a> 
-                <a 
+                </a>  */}
+                {/* <a 
                     href="/imprint"
                     style={{ color: manu.dark}}
                 >
                     Newsletter
-                </a>       
+                </a>        */}
                 <a 
                     href="/imprint"
                     style={{ color: manu.dark}}

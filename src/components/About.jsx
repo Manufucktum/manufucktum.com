@@ -10,23 +10,21 @@ const About = () => {
     const [manu]  = useContext(ManuContext)
 
     return (
-        <motion.section
-          
+        <motion.section   
             transition={{ duration: 1, ease: "linear" }}
             className="about-container"
-            style={{ backgroundColor: manu.light, color: manu.dark }}
-        > 
-        
-            <Nav /> 
-                {Object.keys(manu.api).length !== 0 && (
-                    <div className="about-info">
-                        <h1>{manu.api.general.title}</h1>
-                        <div className="about-box">
-                            <p>{manu.api.general.desc}</p>
-                        </div> 
+            style={{ backgroundColor: manu.light, color: manu.dark }}> 
+            <Nav />    
+            {/* <Sidebarmenu /> */}
+            {Object.keys(manu.api).length !== 0 && (
+                <div className="about-info">
+                    <div className="about-box">
+                        <h1>What is Manufucktum and what are we doing here?</h1>
+                        <p>{manu.api.general.desc}</p>
                     </div> 
-                )}
-            <Footer />
+                </div> 
+            )}
+             <Footer/>
          </motion.section>
     )
 }
