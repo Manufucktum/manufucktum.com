@@ -5,7 +5,7 @@
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            padding: 75px 0 0;
+            // padding: 75px 0 0;
         }
         
         .collections-artist {
@@ -36,6 +36,9 @@
                 width: 70%;
                 padding: 0 15px;
                 box-sizing: border-box;
+                h2 {
+                    margin-top: 0;
+                }
                 @media only screen and (max-width: $tablet) {
                     width: 100%;
                     padding: 0;
@@ -67,19 +70,6 @@
                 @media only screen and (max-width: $tablet) {
                     padding: 0px;
                 }
-            }
-        }
-        
-        .colections-link {
-            background: rgba(0, 0, 0, .9);
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            // opacity: 0.7;
-            transition: opacity .5s ease;
-            &:hover {
-                // opacity: 0.9;
-                transition: opacity .5s ease;
             }
         }
         

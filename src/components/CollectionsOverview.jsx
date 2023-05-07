@@ -29,9 +29,9 @@ const CollectionsOverview = () => {
         >
             {Object.keys(manu.api).length !== 0 && (
                 <div className="collectionsview-artist" style={{ color: manu.dark }}>
-                    <h1>Latest NFTs</h1>
+                    <h2>Latest NFTs</h2>
                     <div className="collectionsoverview-nfts">
-                        {manu.api.nfts.slice(progress-2,progress).reverse().map(nft => (
+                        {manu.api.nfts.slice(progress-4,progress).reverse().map(nft => (
                              <Link className='collections-nft'
                              to="/collections"  key={nft.id}>
                                 <div className="collectionsoverview-image">
@@ -57,23 +57,21 @@ const CollectionsOverview = () => {
                                 />
                                 </div>
                                 <div className="collectionsoverview-desc">
-                                <h1>{nft.nft_title}</h1>
-                                <h3>{nft.title}</h3>
+                                <h3>{nft.title} {nft.nft_title}</h3>
                                 <p>material: {nft.materials.map(material => `${material}, `)}</p>
-                                <p>{nft.minted ? "Minted on: " : "Minting on: " }{new Date(nft.mint_date*1000).toLocaleDateString('de-DE')}</p>
-                                <p>{nft.series_number} of {nft.series_length}</p>
+                                <h5>{nft.minted ? "Minted on: " : "Minting on: " }{new Date(nft.mint_date*1000).toLocaleDateString('de-DE')}</h5>
+                                <h5>{nft.series_number} of {nft.series_length}</h5>
                                 </div>
                             </Link>
                         ))}
                     </div>
-                    <div className="main-ref">
+                    <div className="sref">
                 <Link 
                     to="/collections" 
-                    className="main-ref-link"
-                    style={{ backgroundColor: manu.dark }}
+                    className="ref-link"
                 >
-                    <p style={{ color: manu.dark }}> See the whole Collection</p>
-                    <svg viewBox="0 0 10 35" fill={manu.dark}>        
+                    <h5> See the whole Collection</h5>
+                    <svg viewBox="0 0 10 35">        
                         <polygon  points="36.7,10.8 6,10.8 15.2,2.2 13.2,0 0,12.3 13.2,24.5 15.2,22.3 6,13.8 36.7,13.8 "/>
                     </svg>
                 </Link >

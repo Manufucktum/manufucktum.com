@@ -11,8 +11,8 @@ import '../styles/collections.scss'
 const Artist = () => {
     const [manu]  = useContext(ManuContext);
     const params = useParams();
-    console.log(params);
-    console.log(manu);
+    // console.log(params);
+    // console.log(manu);
     const [collections,setCollections] = useState({}); 
     const [basefile,setBasefile] = useState({}); 
     useEffect(() => {
@@ -97,16 +97,17 @@ const Artist = () => {
                             />
                             </div>
                             <div className="collections-desc">
-                            <h1>{nft.nft_title}</h1>
-                            <h3>{nft.title}</h3>
+                            <h3>{nft.title} {nft.nft_title}</h3>
                             <p>material: {nft.materials.map(material => `${material}, `)}</p>
-                            <p>{nft.minted ? "Minted on: " : "Minting on: " }{new Date(nft.mint_date*1000).toLocaleDateString('de-DE')}</p>
-                            <p>{nft.series_number} of {nft.series_length}</p>
+                            <h5>{nft.minted ? "Minted on: " : "Minting on: " }{new Date(nft.mint_date*1000).toLocaleDateString('de-DE')}</h5>
+                            <h5>{nft.series_number} of {nft.series_length}</h5>
                             {nft.minted ? 
-                                <a  target="_blank" href={nft.opensea_link}  className="colections-link"  style={{backgroundColor: manu.dark }}>Buy NFT on Opensea</a> : ''
+                                <a  target="_blank" href={nft.opensea_link}  className="ref-link" ><h5>Buy NFT on Opensea</h5><svg viewBox="0 0 10 35">        
+                                <polygon  points="36.7,10.8 6,10.8 15.2,2.2 13.2,0 0,12.3 13.2,24.5 15.2,22.3 6,13.8 36.7,13.8 "/>
+                            </svg></a> : ''
                             }
                             { new Date().getTime() > nft.mint_date*1000 && !nft.minted ? 
-                                <a href="#"  className="colections-link" style={{ backgroundColor: manu.dark }}>Processing <div className="lds-dual-ring"></div></a> 
+                                <a href="#"  className="processing-link"><h5>Processing </h5><div className="lds-dual-ring"></div></a> 
                                 : ''
                             }
                             </div>

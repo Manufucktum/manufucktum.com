@@ -13,6 +13,7 @@ const CurrentArtist = () => {
     let progress = 0;
     let next = 0;
     let finished = false;
+
     // console.log(manu.api.nfts);
     if(manu.api.nfts){
         for (let i = 0;i < manu.api.nfts.length; i++) {
@@ -29,31 +30,30 @@ const CurrentArtist = () => {
             next = 0;
         }
     }
-    const num = 2;
+    
     return (
         <div className="current-artist-container">
             {Object.keys(manu.currentArtist).length !== 0 && (
                 <>
-                    <div className="artist-info" style={{ color: manu.dark }}>
+                    <div className="artist-info">
                         <h1>{manu.currentArtist.name}</h1>
                     </div>
-                    <h5>{manu.api.exhibits[num].title}</h5>
+                    <h3>{manu.api.exhibits[manu.current].title}</h3>
                     <div className="ref">
                         <Link 
-                            to={"/collections/"+manu.api.exhibits[num].id} 
+                            to={"/collections/"+manu.api.exhibits[manu.current].id} 
                             className="ref-link"
-                            style={{ backgroundColor: manu.dark }}
                             >
-                            <p style={{ color: manu.light }}>See the whole Collection</p>
-                            <svg viewBox="0 0 10 35" fill={manu.light}>        
+                            <h5 >See the whole Collection</h5>
+                            <svg viewBox="0 0 10 35">        
                                 <polygon  points="36.7,10.8 6,10.8 15.2,2.2 13.2,0 0,12.3 13.2,24.5 15.2,22.3 6,13.8 36.7,13.8 "/>
                             </svg>
                         </Link >
                     </div>   
                   <Progress/>
-                    <p><b>Size:</b> {manu.api.exhibits[num].width}cm x {manu.api.exhibits[num].depths}cm x {manu.api.exhibits[num].height}cm</p>
-                    <p><b>Materials:</b> {manu.api.exhibits[num].materials}</p>
-                    <p>{manu.api.exhibits[num].description}</p> 
+                    <p><b>Size:</b> {manu.api.exhibits[manu.current].width}cm x {manu.api.exhibits[manu.current].depths}cm x {manu.api.exhibits[manu.current].height}cm</p>
+                    <p><b>Materials:</b> {manu.api.exhibits[manu.current].materials}</p>
+                    <p>{manu.api.exhibits[manu.current].description}</p> 
                 </>
             )}            
         </div>

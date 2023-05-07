@@ -13,9 +13,16 @@
 }
 
 .about-info {
-    width: 35%;
+    width: 50%;
     margin: 100px auto;
+    // display: flex;
+    // flex-wrap: wrap;
     padding: 0 0 10%;
+    svg {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
     @media screen and (max-width: $tablet) {
         width: 70%;
         margin: 15% auto;

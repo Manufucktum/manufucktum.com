@@ -5,7 +5,6 @@ import '../styles/video.scss';
 
 class Video extends Component {
   
-  
     state = {
       playing:true,
       volume: 0.8,
@@ -14,7 +13,7 @@ class Video extends Component {
       loading:false,
       muted: true,
       key: 0,
-      url:'https://api.manufucktum.com/NT_teaser.mp4'
+      url:'https://api.manufucktum.com/IN_01_teaser.mp4'
     }
 
     handlePlayPause = () => {
@@ -43,7 +42,7 @@ class Video extends Component {
       let live = this.props.manu.live;
       console.log(this.props.manu);
       if(!live){
-        this.setState({pulled:true,url:"https://api.manufucktum.com/NT_teaser.mp4"});
+        this.setState({pulled:true,url:"https://api.manufucktum.com/IN_01_teaser.mp4"});
       } else {
         this.setState({pulled:true,url:"https://www.twitch.tv/streamNFT"});
       }

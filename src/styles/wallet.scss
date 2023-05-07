@@ -1,13 +1,11 @@
 @import './vars.scss';
-
 .wallet-container {
     position: fixed;
     top: 5px;
     right: 5px;
     display: none;
-
     button {
-        font-family: "Courier Prime", sans-serif;
+        font-family: "Archivo";
         border: 0;
         height: 35px;
         border: 1px solid $dark;

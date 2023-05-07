@@ -15,8 +15,8 @@ const Nav = ({width}) => {
     return (
         <nav className="nav-container"  style={{
             width:width,
-            left: location.pathname === '/live' ? "auto": 0,
-            right: location.pathname === '/live' ? 0:"auto"
+            // left: location.pathname === '/latest' ? "auto": 0,
+            // right: location.pathname === '/latest' ? 0:"auto"
           
         }} >
           
@@ -44,26 +44,26 @@ const Nav = ({width}) => {
                 </motion.svg>
             </NavLink></li>
                 <li>
-                    <NavLink to="/live"  style={{ 
-                        backgroundColor: location.pathname === '/live' ? manu.dark : manu.light,
-                        color: location.pathname === '/live' ? manu.light : manu.dark, 
+                    <NavLink to="/latest"  style={{ 
+                        backgroundColor: location.pathname === '/latest' ? manu.dark : manu.light,
+                        color: location.pathname === '/latest' ? manu.light : manu.dark, 
                     }}
-                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Live</NavLink>
+                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Latest</NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to="/collections"  style={{ 
                         backgroundColor: location.pathname === '/collections' ? manu.dark : manu.light,
                         color: location.pathname === '/collections' ? manu.light : manu.dark, 
                     }}
-                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Collections</NavLink>
-                </li>
-                <li>
+                    whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Projects</NavLink>
+                </li> */}
+                {/* <li>
                     <NavLink to="/about" style={{ 
                         backgroundColor: location.pathname === '/about' ? manu.dark : manu.light,
                         color: location.pathname === '/about' ? manu.light : manu.dark
                     }}
                     whilehover={{ backgroundColor: manu.dark, color: manu.light }}>About</NavLink>
-                </li>
+                </li> */}
             </ul>
             <ConnectWallet/>
         </nav> 
