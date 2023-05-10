@@ -43,13 +43,13 @@ const Nav = ({width}) => {
                     />
                 </motion.svg>
             </NavLink></li>
-                <li>
+                {/* <li>
                     <NavLink to="/latest"  style={{ 
                         backgroundColor: location.pathname === '/latest' ? manu.dark : manu.light,
                         color: location.pathname === '/latest' ? manu.light : manu.dark, 
                     }}
                     whilehover={{ backgroundColor: manu.dark, color: manu.light }}>Latest</NavLink>
-                </li>
+                </li> */}
                 {/* <li>
                     <NavLink to="/collections"  style={{ 
                         backgroundColor: location.pathname === '/collections' ? manu.dark : manu.light,

@@ -46,23 +46,23 @@ const ManuProvider = ({ children }) => {
 
     fetchData();
   }, []);
-  useEffect(() => {
-    fetch("https://api.manufucktum.com/stream-status")
-      .then((response) => response.json())
-      .then((data) => {
-        let live = true;
-        // console.log(data.live.id);
-        if (data.live.id) {
-          live = true;
-        } else {
-          live = false;
-        }
-        setManu((state) => ({
-          ...state,
-          live: live,
-        }));
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.manufucktum.com/stream-status")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       let live = true;
+  //       // console.log(data.live.id);
+  //       if (data.live.id) {
+  //         live = true;
+  //       } else {
+  //         live = false;
+  //       }
+  //       setManu((state) => ({
+  //         ...state,
+  //         live: live,
+  //       }));
+  //     });
+  // }, []);
 
   useEffect(() => {
     setManu((state) => ({

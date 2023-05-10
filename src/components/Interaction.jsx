@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { ManuContext } from "../providers/ManuProvider";
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 import "../styles/interaction.scss";
-const socket = io("https://api.manufucktum.com", { transports: ["websocket"] });
+// const socket = io("https://api.manufucktum.com", { transports: ["websocket"] });
 
 const Interaction = () => {
   let [counter, setCounter] = useState(10);
@@ -23,7 +23,7 @@ const Interaction = () => {
   //    return
   //     },[counter]);
   function interact() {
-    socket.emit("feat");
+    // socket.emit("feat");
     count();
   }
 

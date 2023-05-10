@@ -4,11 +4,11 @@ import { useWindowSize } from "../hooks/useWindowSize";
 
 import CurrentArtist from "../components/CurrentArtist";
 import Nav from "../components/Nav";
-import Video from "../components/Video";
-import Threed from "../components/3d";
+// import Video from "../components/Video";
+// import Threed from "../components/3d";
 import Mediaswitch from "../components/Mediaview";
-import Footer from "../components/Footer";
-import Interaction from "../components/Interaction";
+// import Footer from "../components/Footer";
+// import Interaction from "../components/Interaction";
 import "../styles/main.scss";
 
 const Live = () => {
@@ -54,7 +54,7 @@ const Live = () => {
           height: dimensionsVideo.height,
         }}
       >
-        <Mediaswitch />
+        {/* <Mediaswitch /> */}
       </section>
       <section
         className="info-container"
@@ -63,7 +63,7 @@ const Live = () => {
           overflowY: size.width >= 800 ? "auto" : null,
         }}
       >
-        <Interaction />
+        {/* <Interaction /> */}
         <CurrentArtist />
       </section>
     </main>
